@@ -1,8 +1,16 @@
-# React + Vite
+# Aplikasi To-Do List
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+aplikasi To-Do List sederhana yang dibangun menggunakan React dan Vite. Aplikasi ini memungkinkan pengguna untuk menambahkan, menyelesaikan, dan menghapus task. Antarmuka pengguna yang sederhana dan responsif memudahkan pengelolaan task pribadi.
 
-Currently, two official plugins are available:
+## Fitur
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Menambahkan task baru.
+- Menandai task sebagai selesai.
+- Menghapus task.
+- Antarmuka pengguna yang sederhana dan responsif.
+
+## Teknologi yang Digunakan
+
+- **React**: JavaScript library for building user interfaces.
+- **Vite**: A fast, modern build tool for frontend development.
+- **CSS**: Styling the application.
