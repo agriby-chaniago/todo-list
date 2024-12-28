@@ -24,7 +24,14 @@ export default function ToDoItem({ todo, toggleComplete, deleteTodo }) {
       <Toaster richColors position='top-center' />
       <li className='todo-item'>
         <span
-          onClick={() => toggleComplete(todo.id)}
+          onClick={() => {
+            toggleComplete(todo.id);
+            if (!todo.completed) {
+              toast.info("Task dicoret anjay");
+            } else if (todo.completed) {
+              toast.info("lah gajadi dicoret");
+            }
+          }}
           style={{
             textDecoration: todo.completed ? "line-through" : "none",
             cursor: "pointer",
