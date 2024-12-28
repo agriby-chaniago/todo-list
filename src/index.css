@@ -94,33 +94,50 @@ ul {
 @media (max-width: 768px) {
   .app {
     margin: 20px;
+    padding: 15px;
+    max-width: 100%;
+  }
+
+  h1 {
+    font-size: 1.5rem;
   }
 
   .input-form {
     flex-direction: column;
+    gap: 5px;
   }
 
   input {
     width: 100%;
+    font-size: 1rem;
   }
 
   button {
     width: 100%;
+    font-size: 1rem;
   }
 
   .todo-item {
     flex-direction: column;
-  }
-
-  .todo-item span {
-    margin-top: 10px;
+    align-items: flex-start;
+    gap: 5px;
   }
 
   .footer {
     font-size: 12px;
   }
+}
 
-  .footer p {
-    margin: 0;
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.2rem;
+  }
+
+  .input-form {
+    margin-top: 15px;
+  }
+
+  .footer {
+    padding: 8px;
   }
 }
