@@ -89,3 +89,38 @@ ul {
   margin: 0;
   color: #333;
 }
+
+/* Mobile */
+@media (max-width: 768px) {
+  .app {
+    margin: 20px;
+  }
+
+  .input-form {
+    flex-direction: column;
+  }
+
+  input {
+    width: 100%;
+  }
+
+  button {
+    width: 100%;
+  }
+
+  .todo-item {
+    flex-direction: column;
+  }
+
+  .todo-item span {
+    margin-top: 10px;
+  }
+
+  .footer {
+    font-size: 12px;
+  }
+
+  .footer p {
+    margin: 0;
+  }
+}
