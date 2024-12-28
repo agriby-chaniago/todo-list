@@ -105,10 +105,12 @@ ul {
   .input-form {
     flex-direction: column;
     gap: 5px;
+    width: 100%;
   }
 
   input {
     width: 100%;
+    box-sizing: border-box;
     font-size: 1rem;
   }
 
@@ -121,10 +123,12 @@ ul {
     flex-direction: column;
     align-items: flex-start;
     gap: 5px;
+    width: 100%;
   }
 
   .footer {
     font-size: 12px;
+    text-align: center;
   }
 }
 
