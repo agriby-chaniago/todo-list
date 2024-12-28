@@ -1,4 +1,5 @@
 import PropTypes from "prop-types";
+import { Toaster, toast } from "sonner";
 
 export default function ToDoItem({ todo, toggleComplete, deleteTodo }) {
   ToDoItem.propTypes = {
@@ -14,21 +15,25 @@ export default function ToDoItem({ todo, toggleComplete, deleteTodo }) {
   const handleDelete = () => {
     if (window.confirm("Apakah Anda yakin ingin menghapusnya?")) {
       deleteTodo(todo.id);
+      toast.error("Task Berhasil dihapus");
     }
   };
 
   return (
-    <li className='todo-item'>
-      <span
-        onClick={() => toggleComplete(todo.id)}
-        style={{
-          textDecoration: todo.completed ? "line-through" : "none",
-          cursor: "pointer",
-        }}
-      >
-        {todo.text}
-      </span>
-      <button onClick={handleDelete}>Hapus</button>
-    </li>
+    <>
+      <Toaster richColors position='top-center' />
+      <li className='todo-item'>
+        <span
+          onClick={() => toggleComplete(todo.id)}
+          style={{
+            textDecoration: todo.completed ? "line-through" : "none",
+            cursor: "pointer",
+          }}
+        >
+          {todo.text}
+        </span>
+        <button onClick={handleDelete}>Hapus</button>
+      </li>
+    </>
   );
 }

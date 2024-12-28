@@ -1,5 +1,6 @@
 import { useState } from "react";
 import PropTypes from "prop-types";
+import { Toaster, toast } from "sonner";
 
 export default function InputForm({ addTodo }) {
   const [input, setInput] = useState("");
@@ -11,19 +12,23 @@ export default function InputForm({ addTodo }) {
     if (input.trim()) {
       addTodo(input);
       setInput("");
-      alert("Task berhasil ditambahkan!");
+      toast.success("Task Berhasil ditambahkan");
     }
   };
 
   return (
-    <form onSubmit={handleSubmit} className='input-form'>
-      <input
-        type='text'
-        value={input}
-        onChange={(e) => setInput(e.target.value)}
-        placeholder='Tambah task...'
-      />
-      <button type='submit'>Tambah</button>
-    </form>
+    <>
+      <Toaster richColors position='top-center' />
+      <form onSubmit={handleSubmit} className='input-form'>
+        <input
+          type='text'
+          value={input}
+          onChange={(e) => setInput(e.target.value)}
+          placeholder='Tambah task...'
+        />
+
+        <button type='submit'>Tambah</button>
+      </form>
+    </>
   );
 }
