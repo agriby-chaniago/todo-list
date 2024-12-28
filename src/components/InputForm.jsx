@@ -11,6 +11,7 @@ export default function InputForm({ addTodo }) {
     if (input.trim()) {
       addTodo(input);
       setInput("");
+      alert("Task berhasil ditambahkan!");
     }
   };
 
@@ -20,7 +21,7 @@ export default function InputForm({ addTodo }) {
         type='text'
         value={input}
         onChange={(e) => setInput(e.target.value)}
-        placeholder='Tambah Tugas...'
+        placeholder='Tambah task...'
       />
       <button type='submit'>Tambah</button>
     </form>

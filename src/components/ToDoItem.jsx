@@ -10,6 +10,13 @@ export default function ToDoItem({ todo, toggleComplete, deleteTodo }) {
     toggleComplete: PropTypes.func.isRequired,
     deleteTodo: PropTypes.func.isRequired,
   };
+
+  const handleDelete = () => {
+    if (window.confirm("Apakah Anda yakin ingin menghapusnya?")) {
+      deleteTodo(todo.id);
+    }
+  };
+
   return (
     <li className='todo-item'>
       <span
@@ -21,13 +28,7 @@ export default function ToDoItem({ todo, toggleComplete, deleteTodo }) {
       >
         {todo.text}
       </span>
-      <button
-        onClick={() => {
-          deleteTodo(todo.id);
-        }}
-      >
-        Hapus
-      </button>
+      <button onClick={handleDelete}>Hapus</button>
     </li>
   );
 }
