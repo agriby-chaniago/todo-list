@@ -1,8 +1,13 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   font-family: Arial, Helvetica, sans-serif;
   background-color: #f4f4f9;
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
 }
 
 .app {
@@ -76,14 +81,18 @@ ul {
 
 .footer {
   background-color: #f1f1f1;
-  text-align: center;
-  padding: 10px;
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
+  text-align: center; /* Untuk memastikan teks berada di tengah */
+  padding: 10px; /* Padding di dalam elemen */
+  position: fixed; /* Tetap di bagian bawah */
+  bottom: 0; /* Posisi di bagian bawah */
+  left: 0; /* Mulai dari kiri */
+  right: 0; /* Tambahkan ini agar lebar penuh */
+  width: 100%; /* Memastikan footer selalu selebar layar */
   font-size: 14px;
+  box-sizing: border-box; /* Pastikan padding termasuk dalam ukuran elemen */
+  margin: 0; /* Hapus margin jika ada */
 }
+
 
 .footer p {
   margin: 0;
@@ -129,6 +138,7 @@ ul {
   .footer {
     font-size: 12px;
     text-align: center;
+    padding: 8px;
   }
 }
 
@@ -142,6 +152,7 @@ ul {
   }
 
   .footer {
-    padding: 8px;
+    font-size: 10px;
+    padding: 6px;
   }
 }
