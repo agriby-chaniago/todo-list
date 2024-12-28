@@ -18,7 +18,7 @@ export default function InputForm({ addTodo }) {
 
   return (
     <>
-      <Toaster richColors position='top-center' />
+      <Toaster richColors position='bottom-center' />
       <form onSubmit={handleSubmit} className='input-form'>
         <input
           type='text'
