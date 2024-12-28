@@ -1,10 +1,21 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import InputForm from "./components/InputForm";
 import ToDoItem from "./components/ToDoItem";
 import Footer from "./components/Footer";
 
 function App() {
   const [todos, setTodos] = useState([]);
+
+  useEffect(() => {
+    const savedTodos = localStorage.getItem("todos");
+    if (savedTodos) {
+      setTodos(JSON.parse(savedTodos));
+    }
+  }, []);
+
+  useEffect(() => {
+    localStorage.setItem("todos", JSON.stringify(todos));
+  }, [todos]);
 
   const addTodo = (task) => {
     setTodos([...todos, { id: Date.now(), text: task, completed: false }]);
