@@ -21,7 +21,7 @@ export default function ToDoItem({ todo, toggleComplete, deleteTodo }) {
 
   return (
     <>
-      <Toaster richColors position='top-center' />
+      <Toaster richColors position='bottom-center' />
       <li className='todo-item'>
         <span
           onClick={() => {
